@@ -13,6 +13,7 @@ jspm_packages/
 .yarn/install-state.gz
 .pnp.*
 yarn.lock
+yarn-error.log
 
 
 # Gatsby files
