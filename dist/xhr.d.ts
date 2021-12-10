@@ -36,7 +36,7 @@ export declare function ajaxCache(se: Iajax, timeOut?: number): Promise<unknown>
 
 export declare function createFormData(obj: any, formDataAppending?: FormData, namespace?: any): FormData;
 
-export { ajax, getObserve };
+export { ajax, getObserve, ajaxCache, ajaxRemoveByUrl };
 export type { Iajax } from "./ajax";
 
 export declare type Ilistener = (xhr: XMLHttpRequest) => void;
