@@ -167,7 +167,7 @@ class LocalCache
         return p;
     }
 
-    async get(se:Iajax, timeOut:number=((new Date()).getTime()))
+    get(se:Iajax, timeOut:number=((new Date()).getTime()))
     {
         return new Promise((resolve,reject)=>
         {
