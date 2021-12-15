@@ -1,6 +1,6 @@
 {
   "name": "intoy-xhr",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "js xhr",
   "main": "dist/xhr.js",
   "typings": "dist/xhr.d.ts",
@@ -9,6 +9,9 @@
   "scripts": {
     "g": "webpack --mode development",
     "b": "webpack --mode production"
+  },
+  "dependencies": {
+    "intoy-utils": "^0.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -28,8 +31,5 @@
     "type": "git",
     "url": "git+https://github.com/intoynto/js-xhr"
   },
-  "homepage": "https://github.com/intoynto/js-xhr",
-  "dependencies": {
-    "intoy-utils": "^0.0.3"
-  }
+  "homepage": "https://github.com/intoynto/js-xhr"
 }

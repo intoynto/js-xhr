@@ -1,4 +1,4 @@
-import { ajax, Iajax } from ".";
+import { ajax, Iajax } from "./ajax";
 import { toInt, toStr } from "intoy-utils";
 
 
