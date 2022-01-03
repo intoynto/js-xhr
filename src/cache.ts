@@ -1,6 +1,7 @@
 import { ajax, Iajax } from "./ajax";
 import { toInt, toStr } from "intoy-utils";
 
+const defaultTimeOut:number=1000 * 30; // 30 detik
 
 interface IstoreAjax {
     setUrl:(url?:string)=>this
@@ -167,7 +168,7 @@ class LocalCache
         return p;
     }
 
-    get(se:Iajax, timeOut:number=((new Date()).getTime()))
+    get(se:Iajax, timeOutSeconds:number=((new Date()).getTime()))
     {
         return new Promise((resolve,reject)=>
         {
@@ -185,9 +186,8 @@ class LocalCache
                 const sisa_waktu = currTime - responseDataTime;
                 const isExpire=sisa_waktu > expireTime ;
                 const originResponseTime=responseTime;
-
+                
                 responseTime=responseDataTime;
-
 
                 if(isExpire)
                 {
@@ -215,7 +215,7 @@ class LocalCache
                             this.internalRemove(this.keys[0]);
                         }
                     }
-                    this.expires.push(timeOut);
+                    this.expires.push(timeOutSeconds);
                     this.keys.push(key); // push in array
                     this.store.push(p);
                     const response:IresponseData={
@@ -254,7 +254,8 @@ export function ajaxRemoveByUrl(url:string)
     getCache().removeByUrl(url);
 }
 
-export function ajaxCache(se:Iajax, timeOut:number=((new Date()).getTime()))
+// time out 5 detik
+export function ajaxCache(se:Iajax, timeOutSeconds:number=defaultTimeOut)
 {
-    return getCache().get(se,timeOut);
+    return getCache().get(se,timeOutSeconds);
 }

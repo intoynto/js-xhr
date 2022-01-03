@@ -1,6 +1,6 @@
 {
   "name": "intoy-xhr",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "js xhr",
   "main": "dist/xhr.js",
   "typings": "dist/xhr.d.ts",

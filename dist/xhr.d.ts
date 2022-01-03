@@ -32,7 +32,7 @@ export declare function ajax(ops: Iajax): Promise<unknown>;
 
 export declare function getKeyByUrl(url?: string): string;
 export declare function ajaxRemoveByUrl(url: string): void;
-export declare function ajaxCache(se: Iajax, timeOut?: number): Promise<unknown>;
+export declare function ajaxCache(se: Iajax, timeOutSeconds?: number): Promise<unknown>;
 
 export declare function createFormData(obj: any, formDataAppending?: FormData, namespace?: any): FormData;
 
