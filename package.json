@@ -1,6 +1,6 @@
 {
   "name": "intoy-xhr",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "js xhr",
   "main": "dist/xhr.js",
   "typings": "dist/xhr.d.ts",
@@ -11,7 +11,7 @@
     "b": "webpack --mode production"
   },
   "dependencies": {
-    "intoy-utils": "^0.0.6"
+    "intoy-utils": "^0.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
