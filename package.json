@@ -1,31 +1,37 @@
 {
   "name": "intoy-xhr",
-  "version": "0.0.6",
+  "version": "0.0.7.beta-0.1",
   "description": "js xhr",
-  "main": "dist/xhr.js",
-  "typings": "dist/xhr.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
   "author": "intoy",
   "license": "MIT",
   "scripts": {
+    "fix": "node wp.fix.js",
+    "pre": "del dist",
     "g": "webpack --mode development",
-    "b": "webpack --mode production"
+    "bw": "webpack --mode production && yarn fix",
+    "b": "npm run pre && rollup -c"
   },
   "dependencies": {
-    "intoy-utils": "^0.0.8"
+    "intoy-utils": "^0.0.9-beta-0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/parser": "^7.16.4",
-    "@types/node": "^16.11.11",
-    "@types/webpack": "^5.28.0",
-    "babel-loader": "^8.2.3",
-    "clean-webpack-plugin": "^4.0.0",
-    "terser-webpack-plugin": "^5.2.5",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.5.2",
-    "typescript-declaration-webpack-plugin": "^0.2.2",
-    "webpack": "^5.64.4",
-    "webpack-cli": "^4.9.1"
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/node": "^18.7.1",
+    "rollup": "^2.77.2",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
   },
   "repository": {
     "type": "git",

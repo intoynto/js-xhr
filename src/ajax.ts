@@ -6,7 +6,7 @@
  * @desc XML Http Request
  */
 
-import { getObserve } from ".";
+import { getObserve } from "./observe";
 import { createFormData } from "./createFormData";
 import {serialize} from "./serialize";
 
