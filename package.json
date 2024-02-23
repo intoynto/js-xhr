@@ -14,7 +14,7 @@
     "b": "npm run pre && rollup -c"
   },
   "dependencies": {
-    "intoy-utils": "^1.0.0"
+    "intoy-utils": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
